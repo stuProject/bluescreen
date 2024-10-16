@@ -1,0 +1,205 @@
+/* Main Section */
+section {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 40px;
+  margin-bottom: 50px;
+  font-size: 40px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+
+
+select::-ms-expand {
+  display: none;
+}
+
+form > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 38px;
+  margin-left: -100px;
+  margin-top: -20px;
+
+  display: inline-block;
+  border: 1px solid #666666;
+}
+
+input {
+  position: relative;
+  top: 4px;
+  left: 2px;
+  border: none;
+  font-size: 16px;
+}
+
+input:active,
+input:focus,
+input:hover {
+  outline: none;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: 106px;
+  margin-top: -20px;
+
+  background: rgb(0, 128, 255);
+  color: white;
+  border: none;
+}
+
+table {
+  width: 96%;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 40px;
+}
+
+.table-notice {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.ttable-notice {
+  background: rgb(0, 128, 255);
+  color: white;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+}
+
+.table-title {
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  border: 1px solid silver;
+  border-top: 2px solid black;
+  height:65px;
+  font-weight:bold;
+  font-size:18px;
+  padding:20px;
+}
+
+td {
+  border: 1px solid silver;
+  height:60px;
+  padding:20px;
+}
+
+tr{
+	
+}
+
+th,
+td {
+  border-left: hidden;
+  border-right: hidden;
+}
+
+.page-num {
+  margin-top: 15px;
+}
+
+.page-num li {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  
+  
+
+}
+
+.first {
+  background: url(../images/btn/btn_pre2.gif) no-repeat;
+  border:0;padding:0; 
+  margin:30px 0 0 0;
+}
+
+.prev {
+  background: url(../images/btn/btn_pre1.gif) no-repeat;
+  border:0;padding:0;
+  margin:30px 0 0 0;
+
+}
+
+.num {
+  position: relative;
+  top: -20px;
+  height: 33px !important;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px #989898 solid;
+}
+
+.num > div {
+  position: relative;
+  top: 2px;
+}
+
+.next {
+  background: url(../images/btn/btn_next1.gif) no-repeat;
+   border:0;padding:0;
+   margin:30px 0 0 0;
+ 
+}
+
+.last1 {
+  background: url(../images/btn/btn_next2.gif) no-repeat;
+  border:0;padding:0;
+  margin:30px 0 0 0;
+  
+}
+
+.write {
+  width: 125px;
+  height: 50px;
+  line-height: 50px;
+  background: #0a47ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size:14px;
+  font-weight:bold;
+  margin:-90px 0 0 370px;
+  
+}
+
+.llist {
+  overflow: hidden;
+  width: 45px;
+  height: 25px;
+  line-height: 15px;
+  color: #0a47ff;
+  border:1px solid #0a47ff;
+  border-radius: 8px;
+  font-size:10px;
+  background:none;
+  font-weight:bold;
+  top:45px;
+  left:910px;
+  
+}
+.llist:hover {
+  border:1px solid white;
+  background:#0a47ff;
+  color:white;
+}
+

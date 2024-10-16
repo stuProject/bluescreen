@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/* Font */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap'); */
+@import url('../fonts/import/roboto.css');
+@import url('../fonts/import/notoSansKR.css');
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 700;
+    src: url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Bold.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 500;
+    src: url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 400;
+    src: url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 300;
+    src: url('../fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    font-weight: 100;
+    src: url('https://www.bigdata-map.kr/fonts/SpoqaHanSansNeo/SpoqaHanSansNeo-Thin.ttf') format('truetype');
+}
+
+
+
+/* Reset */
+section{margin: 0;padding: 0;border: 0;vertical-align: baseline;font-size: 100%;font: inherit;}
+
+
+
+div, p, span, a { line-height:1.4; }
+
+a { color:#333; text-decoration:none; }
+
+em { font-style:normal; }
+
+legend { visibility:hidden; height:0; width:0; font-size:0; line-height:0; overflow:hidden; position:absolute; }
+form fieldset { border:none; padding:0; margin:0; }
+img { max-width:100%; }
+
+
+
+
+
+

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.java.mapper.MedicineMapper">
+	
+	<select id="selectListCount" resultType="int">
+		select count(*) from medicine
+		<if test="textBox != null and !textBox.equals('')">
+			<if test="categoryDetail != null and !categoryDetail.equals('')">
+				<if test="categoryDetail == 'entpName'">
+					where entpName like '%'|| #{textBox} ||'%'
+				</if>
+				<if test="categoryDetail == 'itemName'">
+					where itemname like '%'|| #{textBox} ||'%'
+				</if>
+				<if test="categoryDetail == 'efcyQesitm'">
+					where efcyQesitm like '%'|| #{textBox} ||'%'
+				</if>
+				<if test="categoryDetail == 'atpn'">
+					where atpnWarnQesitm like '%'|| #{textBox} ||'%' or atpnQesitm like '%'|| #{textBox} ||'%' or intrcQesitm like '%'|| #{textBox} ||'%'
+				</if>
+			</if>
+		</if>
+	</select>
+	
+	<select id="selectAll" resultType="com.java.dto.Medicine">
+		<![CDATA[ 
+			select * from (select rownum rnum, a.* from (select * from medicine 
+		]]>
+		<if test="textBox != null and !textBox.equals('')">
+			<if test="categoryDetail != null and !categoryDetail.equals('')">
+				<if test="categoryDetail == 'entpName'">
+					where entpName like '%'|| #{textBox} ||'%'
+				</if>
+				<if test="categoryDetail == 'itemName'">
+					where itemName like '%'|| #{textBox} ||'%'
+				</if>
+				<if test="categoryDetail == 'efcyQesitm'">
+					where efcyQesitm like '%'|| #{textBox} ||'%'
+				</if>
+				<if test="categoryDetail == 'atpn'">
+					where atpnWarnQesitm like '%'|| #{textBox} ||'%' or atpnQesitm like '%'|| #{textBox} ||'%' or intrcQesitm like '%'|| #{textBox} ||'%'
+				</if>
+			</if>
+		</if>
+		<![CDATA[ 
+			order by mno asc) a) where rnum >=#{pageDto.startRow} and rnum<=#{pageDto.endRow}
+		]]>
+	</select>
+	
+	<select id="selectOneMedicine" resultType="com.java.dto.Medicine">
+		select * from medicine where mno = #{mno}
+	</select>
+	
+<!-- 	<insert id="enableBookMarkMedicine">
+		insert into medicine_user values()
+	</insert> -->
+	
+	<select id="getAllBookMark" resultType="Integer">
+		select mno from medicine_user where uno = #{uno}
+	</select>
+	
+	<insert id="enableBookMarkMedicine">
+		insert into medicine_user values(#{mno}, #{uno}, 1)
+	</insert>
+	
+	<delete id="disableBookmarkMedicine">
+		delete from medicine_user where uno = #{uno} and mno = #{mno}
+	</delete>
+	
+	<select id="selectMedicineOne" resultType="com.java.dto.Medicine">
+		select * from Medicine where itemSeq = #{itemSeq} and entpName = #{entpName}
+	</select>
+	
+	<insert id="insertMedicineOne">
+		insert into medicine values(medicine_seq.nextval, #{entpName}, #{itemName}, #{itemSeq}, #{efcyQesitm}, #{useMethodQesitm}, #{atpnWarnQesitm}, #{atpnQesitm}, #{intrcQesitm}, #{seQesitm}, #{depositMethodQesitm}, #{imageURL})
+	</insert>
+</mapper>

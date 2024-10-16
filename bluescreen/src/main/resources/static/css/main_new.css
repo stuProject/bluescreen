@@ -1,0 +1,46 @@
+#slide4 { background:#ebf0f7; }
+/* .story-wrap { padding-top:80px; } */
+.story-wrap .content { position:relative; }
+.story-wrap .left { position:absolute; top:0; left:0; }
+.story-wrap h2 { font-size:3em; font-weight:bold; }
+.story-wrap .left p { margin:30px 0 50px; font-size:1.25em; font-weight:300; }
+
+.story-wrap .right { position:relative; float:right; height:815px; }
+.story-wrap .wrap { margin-top:30px; position:absolute; width:300px; transition:all 0.3s; -webkit-transition:all 0.3s; }
+.story-wrap .wrap:hover { box-shadow:0px 30px 40px 0 rgba(0, 25, 82, 0.15) }
+.story-wrap .wrap img { width:100%; }
+.story-wrap .text { padding:20px 20px 25px; background:#fff; }
+.story-wrap .text span { padding:3px 15px; border-radius:20px; }
+.story-wrap .text p { margin-top:20px; font-size:1.25em; line-height:1.4; height:2.8em;
+	display:-webkit-box; word-wrap:normal; overflow:hidden; text-overflow:ellipsis; -webkit-line-clamp:2; -webkit-box-orient:vertical; }
+
+.story-wrap .wrap:nth-of-type(1) { right:680px; top:300px; }
+.story-wrap .wrap:nth-of-type(2) { right:340px; top:150px; }
+.story-wrap .wrap:nth-of-type(3) { right:0; top:0; }
+.story-wrap .wrap:nth-of-type(4) { right:340px; top:500px; }
+.story-wrap .wrap:nth-of-type(5) { right:0; top:350px;; }
+
+.story-wrap .text .cate6 { background:#fddadf; color:#b92e49; } /* 유통 */
+.story-wrap .text .cate9 { background:#d4f4e7; color:#197b44; } /* 헬스케어 */
+.story-wrap .text .cate5 { background:#ebe1fa; color:#7752ba; } /* 문화 */
+.story-wrap .text .cate4 { background:#daf0ff; color:#256db9; } /* 환경 */
+.story-wrap .text .cate13 { background:#fadcf0; color:#ab3a81; } /* 소방안전 */
+.story-wrap .text .cate3 { background:#dae1ff; color:#3c54e1; } /* 지역경제 */
+.story-wrap .text .cate10 { background:#e3f7e1; color:#397d2c; } /* 산림 */
+.story-wrap .text .cate7 { background:#ffe4db; color:#ae4c1c; } /* 통신 */
+.story-wrap .text .cate1 { background:#e1e1e5; color:#5a5c73; } /* 중소기업 */
+.story-wrap .text .cate17 { background:#dfdfdf; color:#5f5f5f; } /* 디지털산업 */
+.story-wrap .text .cate2 { background:#d5dde6; color:#2f5484; } /* 교통 */
+.story-wrap .text .cate8 { background:#fff3d9; color:#9d6315; } /* 금융 */
+.story-wrap .text .cate16 { background:#f1e4da; color:#915b25; } /* 라이프로그 */
+.story-wrap .text .cate18 { background:#e8f3d4; color:#44790f; } /* 농식품 */
+.story-wrap .text .cate15 { background:#d9e3f3; color:#3563ae; } /* 해양수산 */
+.story-wrap .text .cate14 { background:#d2f0f2; color:#08738e; } /* 스마트치안 */
+
+.story-wrap li .wrap:hover { box-shadow:0px 30px 40px 0 rgba(0, 25, 82, 0.15); }
+.story-wrap li.no1 { margin-top:290px; }
+.story-wrap li.no2 { margin-top:100px; }
+
+/* Login(로그인) */
+/* 건들지마 선 */ /* 건들지마 선 */ /* 건들지마 선 */ /* 건들지마 선 */ /* 건들지마 선 */ /* 건들지마 선 */ /* 건들지마 선 */ /* 건들지마 선 */ /* 건들지마 선 */ /* 건들지마 선 */ /* 건들지마 선 */ 
+

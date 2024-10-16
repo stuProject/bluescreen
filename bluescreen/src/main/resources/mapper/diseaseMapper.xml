@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.java.mapper.DiseaseMapper">
+	
+	<select id="selectListCount" resultType="int">
+		select count(*) from disease
+		<if test="textBox != null and !textBox.equals('')">
+			<if test="categoryDetail != null and !categoryDetail.equals('')">
+				<if test="categoryDetail == 'sickCd'">
+					where sickCd like '%'|| #{textBox} ||'%'
+				</if>
+				<if test="categoryDetail == 'sickNm'">
+					where sickNm like '%'|| #{textBox} ||'%'
+				</if>
+			</if>
+		</if>
+	</select>
+	
+	<select id="selectAll" resultType="com.java.dto.Disease">
+		<![CDATA[ 
+			select * from (select rownum rnum, a.* from (select * from disease 
+			
+		]]>
+		<if test="textBox != null and !textBox.equals('')">
+			<if test="categoryDetail != null and !categoryDetail.equals('')">
+				<if test="categoryDetail == 'sickCd'">
+					where sickCd like '%'|| #{textBox} ||'%'
+				</if>
+				<if test="categoryDetail == 'sickNm'">
+					where sickNm like '%'|| #{textBox} ||'%'
+				</if>
+			</if>
+		</if>
+		<![CDATA[ 
+			order by dno asc) a) where rnum >=#{pageDto.startRow} and rnum<=#{pageDto.endRow}
+		]]>
+	</select>
+	
+	<select id="getAllBookMark" resultType="Integer">
+		select dno from disease_user where uno = #{uno}
+	</select>
+	
+	<insert id="enableBookMarkDisease">
+		insert into disease_user values(null, null, #{dno}, #{uno}, 1)
+	</insert>
+	
+	<delete id="disableBookMarkDisease">
+		delete from disease_user where uno = #{uno} and dno = #{dno}	
+	</delete>
+	
+	<select id="selectDiseaseOne" resultType="com.java.dto.Disease">
+		select * from disease where sickCd = #{sickCd} and sickNm = #{sickNm}
+	</select>
+	
+	<insert id="insertDiseaseOne">
+		insert into disease values(disease_seq.nextval, #{sickCd}, #{sickNm})
+	</insert>
+	
+</mapper>
